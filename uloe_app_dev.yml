@@ -48,7 +48,7 @@ kind: Deployment
 metadata:
   name: uloe
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: uloe
@@ -59,7 +59,7 @@ spec:
     spec:
       containers:
       - name: uloe-server
-        image: tomlevlin/uloe-server:0.0.5
+        image: tomlevlin/uloe-server:0.0.6
         securityContext:
           readOnlyRootFilesystem: true
         volumeMounts:
